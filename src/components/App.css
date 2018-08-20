@@ -33,13 +33,21 @@
 #banner {
   align-content: center;
   color: hsla(281, 93%, 12%, 0.932);
-  padding-left: 500px;
   font-style: oblique;
 }
-.form_box {
-  padding-left: 600px;
-}
+
 .colum {
   border-left: 6px solid green;
   height: auto;
+}
+.Header {
+  overflow: hidden;
+  height: 100px;
+  padding: 20px 10px;
+  list-style-type: none;
+  font-style: oblique;
+  text-align: center;
+  display: flex;
+  width: 33%;
+  justify-content: space-evenly;
 }

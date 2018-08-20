@@ -1,0 +1,29 @@
+.mylogo {
+  float: left;
+  height: 70px;
+  width: 80px;
+}
+.Nav-buttons {
+  padding-top: 20px;
+}
+.btn-control {
+  border-radius: 50px;
+  width: 90px;
+  font-weight: bold;
+}
+
+.footer {
+  overflow: hidden;
+  font-weight: bold;
+  height: 50px;
+  background-color: #50c7cf;
+  padding-top: 20px;
+}
+.foot {
+  padding-left: 200px;
+}
+.form_box {
+  overflow: hidden;
+  padding-left: 300px;
+  padding-bottom: 40px;
+}
