@@ -148,11 +148,10 @@ class MainPage extends Component {
           <h2 id="banner">Brewery Companies </h2>
           <div>
             <table className="table table-striped">
-              <thead>
+              <thead className="table-head">
                 <tr>
                   <th>Name</th>
                   <th>Address</th>
-                  {/* <th>Email</th> */}
                   <th>City</th>
                   <th>Phone</th>
                   <th>State</th>
@@ -162,11 +161,12 @@ class MainPage extends Component {
                   <th />
                 </tr>
               </thead>
-              <tbody className="alert alert-info">{brew}</tbody>
+
+              <tbody className=" alert alert-info">{brew}</tbody>
             </table>
           </div>
         </div>
-
+<div className="Form_wrapper">
         <form className="form_box" onSubmit={this.addBrew}>
           <p className="h4 mb-4">Create Company</p>
           <h6>Name</h6>
@@ -215,6 +215,7 @@ class MainPage extends Component {
             Add Brewery Company
           </button>
         </form>
+        </div>
       </div>
     );
   }

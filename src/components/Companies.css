@@ -27,3 +27,14 @@
   padding-left: 300px;
   padding-bottom: 40px;
 }
+.table-head {
+  overflow: hidden;
+  background: rgb(6, 82, 82);
+  padding-right: 0;
+}
+.Form_wrapper {
+  background-image: url("http://www.kalonabrewing.com/wp-content/uploads/2013/07/kalona-brewery-equipment1.jpg");
+}
+.head_wrapper {
+  background-image: url("http://www.kalonabrewing.com/wp-content/uploads/2013/07/kalona-brewery-equipment1.jpg");
+}
