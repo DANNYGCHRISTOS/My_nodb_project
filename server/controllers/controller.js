@@ -1,4 +1,4 @@
-const axios = require("axios");
+ const axios = require("axios");
 let breweries = [];
 const getBrew = (req, res, next) => {
   axios.get("https://api.openbrewerydb.org/breweries").then(response => {
@@ -27,8 +27,8 @@ const addBrew = (req, res, next) => {
 const updateBrew = (req, res, next) => {
   // console.log(breweries);
   // console.log(req.body);
-  console.log(req.params.id);
-  const brewerco = breweries.find(c => c.id === parseInt(req.params.id));
+  console.log(req.params.name);
+  const brewerco = breweries.find(c => c.name === parseInt(req.params.name));
   const i = breweries.indexOf(brewerco);
   console.log(i);
   breweries[i].name = req.body.newName;

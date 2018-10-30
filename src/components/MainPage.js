@@ -11,9 +11,7 @@ class MainPage extends Component {
       breweries: [],
       BrewName: [],
       name: "",
-      brewery_type: "",
-      address: "",
-      city: "",
+      brewery_type: "",   
       state: "",
       nav: ["Home", "About", "Contact"]
     };
@@ -66,15 +64,15 @@ class MainPage extends Component {
       .catch(e => alert(e));
   }
 
-  updateBrew(id) {
+  updateBrew(name) {
     const newName = this.state.name;
     console.log(newName);
     axios
-      .put(`/api/breweries/${id}`, { newName })
+      .put(`/api/breweries/${name}`, { newName })
       .then(response => {
         this.setState({ breweries: response.data });
       })
-      .catch(console.log("hi"));
+      // .catch(console.log("hi"));
   }
   deleteBrew(id) {
     axios.delete(`/api/breweries/${id}`).then(response => {
@@ -166,55 +164,55 @@ class MainPage extends Component {
             </table>
           </div>
         </div>
-<div className="Form_wrapper">
-        <form className="form_box" onSubmit={this.addBrew}>
-          <p className="h4 mb-4">Create Company</p>
-          <h6>Name</h6>
-          <input
-            className="Name"
-            type="text"
-            onChange={e => this.nameInputHundler(e)}
-            placeholder="Name"
-            value={this.state.name}
-          />
-          <h6>Address</h6>
-          <input
-            className="address"
-            type="text"
-            onChange={e => this.addressInputHundler(e)}
-            placeholder="Address"
-            value={this.state.address}
-          />
-          <h6>City</h6>
-          <input
-            className="City"
-            type="text"
-            onChange={e => this.cityInputHundler(e)}
-            placeholder="City"
-            value={this.state.city}
-          />
-          <h6>State</h6>
-          <input
-            className="state"
-            type="text"
-            onChange={e => this.stateInputHundler(e)}
-            placeholder="State"
-            value={this.state.state}
-          />
-          <h6>brewery_type</h6>
-          <input
-            className="brewery_type"
-            type="text"
-            onChange={e => this.brewery_typeHundler(e)}
-            placeholder="Brewery_type"
-            value={this.state.brewery_type}
-          />
-          <br />
-          <br />
-          <button className="btn btn-primary btn-sm">
-            Add Brewery Company
-          </button>
-        </form>
+        <div className="Form_wrapper">
+          <form className="form_box" onSubmit={this.addBrew}>
+            <p className="h4 mb-4">Create Company</p>
+            <h6>Name</h6>
+            <input
+              className="Name"
+              type="text"
+              onChange={e => this.nameInputHundler(e)}
+              placeholder="Name"
+              value={this.state.name}
+            />
+            <h6>Address</h6>
+            <input
+              className="address"
+              type="text"
+              onChange={e => this.addressInputHundler(e)}
+              placeholder="Address"
+              value={this.state.address}
+            />
+            <h6>City</h6>
+            <input
+              className="City"
+              type="text"
+              onChange={e => this.cityInputHundler(e)}
+              placeholder="City"
+              value={this.state.city}
+            />
+            <h6>State</h6>
+            <input
+              className="state"
+              type="text"
+              onChange={e => this.stateInputHundler(e)}
+              placeholder="State"
+              value={this.state.state}
+            />
+            <h6>brewery_type</h6>
+            <input
+              className="brewery_type"
+              type="text"
+              onChange={e => this.brewery_typeHundler(e)}
+              placeholder="Brewery_type"
+              value={this.state.brewery_type}
+            />
+            <br />
+            <br />
+            <button className="btn btn-primary btn-sm">
+              Add Brewery Company
+            </button>
+          </form>
         </div>
       </div>
     );

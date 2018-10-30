@@ -11,7 +11,7 @@ app.use(cors());
 
 app.get("/api/breweries", control.getBrew);
 app.post("/api/breweries", control.addBrew);
-app.put("/api/breweries/:id", control.updateBrew);
+app.put("/api/breweries/:name", control.updateBrew);
 app.delete("/api/breweries/:id", control.deleteBrew);
 
 app.listen(port, () => {
